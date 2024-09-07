@@ -1,0 +1,116 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body {
+    /* 초기 배경 색상 설정 */
+    background-color: #000000; /* 첫 페이지 색상 */
+}
+
+/* 첫 화면 (Hero) 스타일 */
+.hero {
+    height: 100vh; /* 화면 전체 높이 */
+    width: 100vw;  /* 화면 전체 너비 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000; /* 푸릇푸릇한 초록색 */
+    color: white;
+    position: relative;
+    overflow: hidden; /* 화면 밖으로 나가는 내용 숨김 */
+    transition: background-color 0.5s; /* 배경 색상 변경 애니메이션 */
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.big-title {
+    font-size: 5vw; /* 글자 크기 증가 */
+    opacity: 0;
+}
+
+.scroll-hint {
+    margin-top: 20px;
+    font-size: 2vw; /* 글자 크기 증가 */
+    opacity: 0;
+    animation: fadeInUp 2s ease-in-out 1s forwards;
+}
+
+.down-arrow {
+    font-size: 2vw; /* 글자 크기 증가 */
+    margin-top: 20px;
+    opacity: 0;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(15px);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 콘텐츠 섹션 스타일 */
+.content {
+    padding: 0;
+}
+
+.section-text {
+    height: 100vh; /* 화면 전체 높이 */
+    width: 100vw;  /* 화면 전체 너비 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    text-align: center;
+    transition: background-color 0.5s; /* 배경 색상 변경 애니메이션 */
+}
+
+.section-text h2 {
+    font-size: 3vw; /* 글자 크기 증가 */
+}
+
+/* 최종 페이지 스타일 */
+.final-page {
+    height: 100vh; /* 화면 전체 높이 */
+    width: 100vw;  /* 화면 전체 너비 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d3e9cd; /* 최종 페이지 색상 */
+    color: #000000;
+    text-align: center;
+}
+
+/* 버튼 스타일 */
+.start-button {
+    display: inline-block;
+    padding: 10px 30px; /* 버튼 크기 증가 */
+    margin-top: 20px;
+    font-size: 1.3rem; /* 글자 크기 증가 */
+    color: #fff;
+    background-color: #2d461f;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #0056b3;
+}
